@@ -62,6 +62,8 @@ syntax: git fetch url-to-repo branchname:refs/remotes/origin/branchname
 
 git fetch  git://git.yoctoproject.org/meta-raspberrypi dunfell:refs/remotes/origin/dunfell
 
+git add and git commit readme.txt
+
 6) Update from upstream:
 git co master
 >> git remote -v
