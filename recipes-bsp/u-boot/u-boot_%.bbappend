@@ -1,8 +1,10 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 SRC_URI_append_rpi = " \
     file://fw_env.config \
 "
+
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 DEPENDS_append_rpi = " u-boot-default-script"
 
