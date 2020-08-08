@@ -14,20 +14,45 @@ git commit -m "first commit"
 
 #git remote add origin git@github.com:RobertBerger/meta-tensorflow.git
 
-git push -u origin master
+#git push -u origin master
 
-3) use my repo
-
-mv meta-tensorflow meta-tensorflow.ori
-git clone git@github.com:RobertBerger/meta-tensorflow.git
+./my-scripts/push-all-to-github.sh
 
 4) add upstream
 
-cd meta-tensorflow
+cd meta-raspberrypi
 
-git remote add official-upstream git://git.yoctoproject.org/meta-tensorflow
+git remote add official-upstream git://git.yoctoproject.org/meta-raspberrypi
 
 git fetch official-upstream
+warning: no common commits
+remote: Enumerating objects: 7803, done.
+remote: Counting objects: 100% (7803/7803), done.
+remote: Compressing objects: 100% (3570/3570), done.
+remote: Total 7803 (delta 4415), reused 6836 (delta 3838)
+Receiving objects: 100% (7803/7803), 1.65 MiB | 1.45 MiB/s, done.
+Resolving deltas: 100% (4415/4415), done.
+From git://git.yoctoproject.org/meta-raspberrypi
+ * [new branch]      daisy        -> official-upstream/daisy
+ * [new branch]      danny        -> official-upstream/danny
+ * [new branch]      denzil       -> official-upstream/denzil
+ * [new branch]      dizzy        -> official-upstream/dizzy
+ * [new branch]      dora         -> official-upstream/dora
+ * [new branch]      dunfell      -> official-upstream/dunfell
+ * [new branch]      dunfell-next -> official-upstream/dunfell-next
+ * [new branch]      dylan        -> official-upstream/dylan
+ * [new branch]      fido         -> official-upstream/fido
+ * [new branch]      fix          -> official-upstream/fix
+ * [new branch]      jethro       -> official-upstream/jethro
+ * [new branch]      krogoth      -> official-upstream/krogoth
+ * [new branch]      master       -> official-upstream/master
+ * [new branch]      morty        -> official-upstream/morty
+ * [new branch]      pyro         -> official-upstream/pyro
+ * [new branch]      rocko        -> official-upstream/rocko
+ * [new branch]      sumo         -> official-upstream/sumo
+ * [new branch]      thud         -> official-upstream/thud
+ * [new branch]      warrior      -> official-upstream/warrior
+ * [new branch]      zeus         -> official-upstream/zeus
 
 git branch -a
 
@@ -35,7 +60,7 @@ git branch -a
 
 syntax: git fetch url-to-repo branchname:refs/remotes/origin/branchname
 
-git fetch git://git.yoctoproject.org/meta-tensorflow master:refs/remotes/origin/2020-05-10-master-as-dunfell
+git fetch  git://git.yoctoproject.org/meta-raspberrypi dunfell:refs/remotes/origin/dunfell
 
 6) Update from upstream:
 git co master
